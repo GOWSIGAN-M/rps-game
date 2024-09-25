@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
+    <meta name="keywords" content="stone paper scissor game,rps,rock game,paper game, scissor game, rock paper scissor">
+    <link rel="stylesheet" href="project4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.js"></script>
+</head>
+<body>
+
+    <div id="scoreboard">
+        <div id="names">
+            <p>ROCK</p>
+            <P>PAPER</P>
+            <P>SCISSORS</P>
+        </div>
+        <div id="c_score">
+        COMPUTER <br> SCORE <br> <br>  <span>0</span>
+        </div>
+        <div id="yr_score">
+        YOUR <br> SCORE <br> <br> <span>0</span>
+        </div>
+    </div>
+
+    <div id="sl_status">
+        <div class="pic">YOU PICKED</div>
+        <div class="pic">PC PICKED</div>
+    </div>
+
+    <div id="selection">
+        <div class="selection_items">
+            <button class="choice" id="rock" value='1' ><img src="./images/rock.png" alt="" id="imag1"></button>
+        </div>
+        <div class="selection_items"><hr id="hhr"></div>
+        
+        <div class="selection_items">
+            <button class="choice" id="paper" value="2"><img src="./images/paper.png" alt="" id="imag2"></button>
+        </div>
+        <div class="selection_items"><hr id="clk"></div>
+        <div class="selection_items"><hr id="antclk"></div>
+
+        <div class="selection_items">
+            <button class="choice" id="scissor" value="3"><img src="./images/scissor.png" alt="" id="imag3"></button>
+        </div>
+    </div>
+
+    <div class="result">  	
+        <div id="loser1">
+            <img src="" alt="">
+        </div>
+
+        <div id="res_name">YOU LOST <br> <span>AGAINST PC</span> <br> <button value="PLAY" onclick="homepage()">PLAY AGAIN</button></div>
+        
+        <div id="winner">
+            <div class="first_ring">
+                <div class="s_ring">
+                    <div class="t_ring">
+                        <div id="f_ring">
+                        <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="res_name1">YOU  WIN<br> <span>AGAINST PC</span> <br> <button value="PLAY" onclick="homepage()">PLAY AGAIN</button></div>
+        <div id="res_name2">TIE UP<br><button value="PLAY" onclick="homepage()">REPLAY</button></div>        
+        
+        <div id="loser2">
+            <img src="" alt="">
+        </div>
+        
+    </div>
+
+    <div id="rules_box">
+        <button id="x" value="cut" onclick="close_rules()">X</button>
+        <p>Game Rules</p>
+        <ul>
+            <li>Rock beats scissors, scissors beat paper and paper beats rock.</li>
+            <li>Agree ahead of time whether you'll count off "rock,paper,scissors."</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+            <li>If both players lay down the same hand, each player lays down another hand.</li>
+        </ul>
+    </div>
+
+    <div id="victory_page">
+        <div id="cup">
+            <img src="./images/Group 5.png" alt="" id="stars">
+            <img src="./images/Vector.png" alt="" id="cup_image">
+
+        </div>
+        <div class="victory_message">
+            HURRAY!!<br><span>YOU WON THE GAME</span>
+        </div>
+        <div class="restart_game">
+            <button value="from0" onclick="homepage()">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button value="RULES" id="rule" onclick="rules()">RULES</button>
+        <button value="NEXT" id="next" onclick="vpage()">NEXT</button>
+    </div>
+
+    <script src="./p1.js"></script>
+
+</body>
+</html>
